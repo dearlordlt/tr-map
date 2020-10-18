@@ -12,19 +12,19 @@ const PLANET_TYPE: typeOptions = {
 }
 
 const PLANET_POP: typeOptions = {
-    "0": "0",
-    "1": "1+",
-    "2": "100+",
-    "3": "1,000+",
-    "4": "10,000+",
-    "5": "100,000+",
-    "6": "1,000,000+",
-    "7": "10,000,000+",
-    "8": "100,000,000+",
-    "9": "1,000,000,000+",
-    "A": "10,000,000,000+",
-    "B": "100,000,000,000+",
-    "C": "1,000,000,000,000+",
+    "0": { inhabitants: "None", pop: "0" },
+    "1": { inhabitants: "Few", pop: "1+" },
+    "2": { inhabitants: "Hundreds", pop: "100+" },
+    "3": { inhabitants: "Thousands", pop: "1,000+" },
+    "4": { inhabitants: "Tens of thousands", pop: "10,000+" },
+    "5": { inhabitants: "Hundreds of thousands", pop: "100,000+" },
+    "6": { inhabitants: "Millions", pop: "1,000,000+" },
+    "7": { inhabitants: "Tens of millions", pop: "10,000,000+" },
+    "8": { inhabitants: "Hundreds of millions", pop: "100,000,000+" },
+    "9": { inhabitants: "Billions", pop: "1,000,000,000+" },
+    "A": { inhabitants: "Tens of billions", pop: "10,000,000,000+" },
+    "B": { inhabitants: "Hundreds of billions", pop: "100,000,000,000+" },
+    "C": { inhabitants: "Trillions", pop: "1,000,000,000,000+" },
 }
 
 const PLANET_OWNER: typeOptions = {
