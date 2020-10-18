@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/">HOME</router-link> |
-    <router-link to="/map">MAP</router-link>
+    <router-link to="/map">MAP</router-link> |
+    <router-link to="/npc">NPC</router-link>
   </div>
   <router-view />
 </template>
