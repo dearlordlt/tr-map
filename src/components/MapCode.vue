@@ -13,27 +13,68 @@
         </fieldset>
       </form>
     </div>
-    <div>{{ mapObject }}</div>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <form class="pure-form pure-form-aligned">
+          <fieldset>
+            <legend>Create System {{ numOfPlanets }}</legend>
+            <div class="pure-control-group">
+              <label for="PLANET_NUM">Number of planets:</label>
+              <select id="PLANET_NUM" v-model="numOfPlanets">
+                <option
+                  v-for="item in [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+                  v-bind:key="item"
+                  :value="item"
+                >
+                  {{ item }}
+                </option>
+              </select>
+              <hr />
+            </div>
+            <div v-for="nPlanets in numOfPlanets" v-bind:key="nPlanets">
+              <div class="pure-control-group">
+                <label for="PLANET_TYPE">Planet type:</label>
+                <select id="PLANET_TYPE">
+                  <option v-for="item in PLANET_TYPE" v-bind:key="item">
+                    {{ item }}
+                  </option>
+                </select>
+              </div>
+              <hr />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="pure-u-1-2">{{ PLANET_TYPE }}</div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { reactive, ref } from "vue";
-import { planetType, planetPop } from "@/planet-types/planetTypes";
+import {
+  planetType,
+  planetPop,
+  planetOwner,
+  planetSize,
+  planetAtmosphere,
+  planetHydro,
+  planetSpaceport,
+  PLANET_TYPE,
+  PLANET_POP,
+  PLANET_OWNER,
+  PLANET_SIZE,
+  PLANET_ATMOSPHERE,
+  PLANET_HYDRO,
+  PLANET_SPACEPORT,
+} from "@/planet-types/planetTypes";
 
 export default {
   setup() {
-    const mapCode = ref("22x");
-    const mapObject = reactive({
-      planets: [
-        {
-          type: planetType(0),
-          pop: planetPop(1),
-          port: `A`,
-        },
-      ],
-      bases: [],
-    });
+    const mapCode = ref("");
+    const mapObject = reactive({});
+    const numOfPlanets = ref(0);
+
     const mapCodeChange = () => {
       console.log(mapCode.value);
     };
@@ -41,6 +82,21 @@ export default {
       mapCode,
       mapCodeChange,
       mapObject,
+      numOfPlanets,
+      planetType,
+      planetPop,
+      planetOwner,
+      planetSize,
+      planetAtmosphere,
+      planetHydro,
+      planetSpaceport,
+      PLANET_TYPE,
+      PLANET_POP,
+      PLANET_OWNER,
+      PLANET_SIZE,
+      PLANET_ATMOSPHERE,
+      PLANET_HYDRO,
+      PLANET_SPACEPORT,
     };
   },
 };
