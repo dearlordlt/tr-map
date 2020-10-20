@@ -90,6 +90,14 @@ const PLANET_SPACEPORT: typeOptions = {
     "X": { quality: "No Starport", cost: "0", fuel: "None", facilities: "None", bases: "None" },
 }
 
+const PLANET_TEMPERATURE: typeOptions = {
+    "0": { type: "Frozen", avg_temp: "-51º or less", description: "Frozen world. No liquid water, very dry atmosphere." },
+    "1": { type: "Cold", avg_temp: "-51º to 0º", description: "Icy world. Little liquid water, extensive ice caps, few clouds." },
+    "2": { type: "Temperate", avg_temp: "0º-30º", description: "Temperate world. Earth- like.Liquid & vaporised water are common, moderate ice caps." },
+    "3": { type: "Hot", avg_temp: "31º-80º", description: "Hot world. Small or no ice caps, little liquid water.Most water in the form of clouds." },
+    "4": { type: "Boiling", avg_temp: "81º+", description: "Boiling world. No ice caps, little liquid water." },
+}
+
 const planetType = (type: string | number) => {
     return PLANET_TYPE[`${type}`];
 }
@@ -118,6 +126,10 @@ const planetSpaceport = (type: string | number) => {
     return PLANET_SPACEPORT[`${type}`];
 }
 
+const planetTemperature = (type: string | number) => {
+    return PLANET_TEMPERATURE[`${type}`];
+}
+
 export {
     planetType,
     planetPop,
@@ -126,6 +138,7 @@ export {
     planetAtmosphere,
     planetHydro,
     planetSpaceport,
+    planetTemperature,
     PLANET_TYPE,
     PLANET_POP,
     PLANET_OWNER,
@@ -133,4 +146,5 @@ export {
     PLANET_ATMOSPHERE,
     PLANET_HYDRO,
     PLANET_SPACEPORT,
+    PLANET_TEMPERATURE,
 }
