@@ -98,6 +98,25 @@ const PLANET_TEMPERATURE: typeOptions = {
     "4": { type: "Boiling", avg_temp: "81º+", description: "Boiling world. No ice caps, little liquid water." },
 }
 
+const PLANET_GOVERNMENT: typeOptions = {
+    "0": { type: "None", description: "No government structure. In many cases, family bonds predominate", examples: "Family, Clan, Anarchy", common_contraband: "None" },
+    "1": { type: "Company/Corporation", description: "Ruling functions are assumed by a company managerial elite, and most citizenry are company employees or dependants", examples: "Corporate outpost, asteroid mine, feudal domain", common_contraband: "Weapons, Drugs, Travellers" },
+    "2": { type: "Participating Democracy", description: "Ruling functions are reached by the advice and consent of the citizenry directly", examples: "Collective, tribal council, commlinked consensus", common_contraband: "Drugs" },
+    "3": { type: "Self-Perpetuating Oligarchy", description: "Ruling functions are performed by a restricted minority, with little or no input from the mass of citizenry", examples: "Plutocracy, hereditary ruling caste", common_contraband: "Technology, Weapons, Travellers" },
+    "4": { type: "Representative Democracy", description: "Ruling functions are performed by elected representatives", examples: "Republic, democracy", common_contraband: "Drugs, Weapons, Psionics" },
+    "5": { type: "Feudal Technocracy", description: "Ruling functions are performed by specific individuals for persons who agree to be ruled by them.Relationships are based on the performance of technical activities which are mutually beneficial", examples: "Those with access to higher technology tend to have higher social status", common_contraband: "Technology, Weapons, Computers" },
+    "6": { type: "Captive Government", description: "Ruling functions are performed by an imposed leadership answerable to an outside group", examples: "A colony or conquered area", common_contraband: "Weapons, Technology, Travellers" },
+    "7": { type: "Balkanisation", description: "No central authority exists; rival governments complete for control.Law level refers to the government nearest the starport", examples: "Multiple governments, civil war", common_contraband: "Varies" },
+    "8": { type: "Civil Service Bureaucracy", description: "Ruling functions are performed by government agencies employing individuals selected for their expertise", examples: "Technocracy, Communism", common_contraband: "Drugs, Weapons," },
+    "9": { type: "Impersonal Bureaucracy", description: "Ruling functions are performed by agencies which have become insulated from the governed citizens", examples: "Entrenched castes of bureaucrats, decaying empire", common_contraband: "Technology, Weapons, Drugs, Travellers, Psionics" },
+    "A": { type: "Charismatic Dictator", description: "Ruling functions are performed by agencies directed by a single leader who enjoys the overwhelming confidence of the citizens", examples: "Revolutionary leader, messiah, emperor", common_contraband: "None" },
+    "B": { type: "Non-Charismatic Leader", description: "A previous charismatic dictator has been replaced by a leader through normal channels", examples: "Military dictatorship, hereditary kingship", common_contraband: "Weapons, Technology, Computers" },
+    "C": { type: "Charismatic Oligarchy", description: "Ruling functions are performed by a select group of members of an organisation or class which enjoys the overwhelming confidence of the citizenry", examples: "Junta, revolutionary council", common_contraband: "Weapons" },
+    "D": { type: "Religious Dictatorship", description: "Ruling functions are performed by a religious organisation without regard to the specific individual needs of the citizenry", examples: "Cult, transcendent philosophy, psionic group mind", common_contraband: "Varies" },
+    "E": { type: "Religious Autocracy", description: "Government by a single religious leader having absolute power over the citizenry", examples: "Messiah", common_contraband: "Varies" },
+    "F": { type: "Totalitarian Oligarchy", description: "Government by an all-powerful minority which maintains absolute control through widespread coercion and oppresion", examples: "World church, Ruthless corporation", common_contraband: "Varies" },
+}
+
 const planetType = (type: string | number) => {
     return PLANET_TYPE[`${type}`];
 }
@@ -130,6 +149,10 @@ const planetTemperature = (type: string | number) => {
     return PLANET_TEMPERATURE[`${type}`];
 }
 
+const planetGovernment = (type: string | number) => {
+    return PLANET_GOVERNMENT[`${type}`];
+}
+
 export {
     planetType,
     planetPop,
@@ -139,6 +162,7 @@ export {
     planetHydro,
     planetSpaceport,
     planetTemperature,
+    planetGovernment,
     PLANET_TYPE,
     PLANET_POP,
     PLANET_OWNER,
@@ -147,4 +171,5 @@ export {
     PLANET_HYDRO,
     PLANET_SPACEPORT,
     PLANET_TEMPERATURE,
+    PLANET_GOVERNMENT,
 }
