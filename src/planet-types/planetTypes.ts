@@ -93,7 +93,7 @@ const PLANET_SPACEPORT: typeOptions = {
 const PLANET_TEMPERATURE: typeOptions = {
     "0": { type: "Frozen", avg_temp: "-51º or less", description: "Frozen world. No liquid water, very dry atmosphere." },
     "1": { type: "Cold", avg_temp: "-51º to 0º", description: "Icy world. Little liquid water, extensive ice caps, few clouds." },
-    "2": { type: "Temperate", avg_temp: "0º-30º", description: "Temperate world. Earth- like.Liquid & vaporised water are common, moderate ice caps." },
+    "2": { type: "Temperate", avg_temp: "0º-30º", description: "Temperate world. Earth- like.Liquid & vaporized water are common, moderate ice caps." },
     "3": { type: "Hot", avg_temp: "31º-80º", description: "Hot world. Small or no ice caps, little liquid water.Most water in the form of clouds." },
     "4": { type: "Boiling", avg_temp: "81º+", description: "Boiling world. No ice caps, little liquid water." },
 }
@@ -111,8 +111,8 @@ const PLANET_GOVERNMENT: typeOptions = {
     "9": { type: "Impersonal Bureaucracy", description: "Ruling functions are performed by agencies which have become insulated from the governed citizens", examples: "Entrenched castes of bureaucrats, decaying empire", common_contraband: "Technology, Weapons, Drugs, Travellers, Psionics" },
     "A": { type: "Charismatic Dictator", description: "Ruling functions are performed by agencies directed by a single leader who enjoys the overwhelming confidence of the citizens", examples: "Revolutionary leader, messiah, emperor", common_contraband: "None" },
     "B": { type: "Non-Charismatic Leader", description: "A previous charismatic dictator has been replaced by a leader through normal channels", examples: "Military dictatorship, hereditary kingship", common_contraband: "Weapons, Technology, Computers" },
-    "C": { type: "Charismatic Oligarchy", description: "Ruling functions are performed by a select group of members of an organisation or class which enjoys the overwhelming confidence of the citizenry", examples: "Junta, revolutionary council", common_contraband: "Weapons" },
-    "D": { type: "Religious Dictatorship", description: "Ruling functions are performed by a religious organisation without regard to the specific individual needs of the citizenry", examples: "Cult, transcendent philosophy, psionic group mind", common_contraband: "Varies" },
+    "C": { type: "Charismatic Oligarchy", description: "Ruling functions are performed by a select group of members of an organization or class which enjoys the overwhelming confidence of the citizenry", examples: "Junta, revolutionary council", common_contraband: "Weapons" },
+    "D": { type: "Religious Dictatorship", description: "Ruling functions are performed by a religious organization without regard to the specific individual needs of the citizenry", examples: "Cult, transcendent philosophy, psionic group mind", common_contraband: "Varies" },
     "E": { type: "Religious Autocracy", description: "Government by a single religious leader having absolute power over the citizenry", examples: "Messiah", common_contraband: "Varies" },
     "F": { type: "Totalitarian Oligarchy", description: "Government by an all-powerful minority which maintains absolute control through widespread coercion and oppresion", examples: "World church, Ruthless corporation", common_contraband: "Varies" },
 }
