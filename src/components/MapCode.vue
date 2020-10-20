@@ -31,19 +31,22 @@
               </select>
               <hr />
             </div>
-            <div v-for="nPlanets in numOfPlanets" v-bind:key="nPlanets">
-              <div class="pure-control-group">
-                <label for="PLANET_TYPE">Planet type:</label>
-                <select id="PLANET_TYPE">
-                  <option v-for="item in PLANET_TYPE" v-bind:key="item">
-                    {{ item }}
-                  </option>
-                </select>
-              </div>
-              <hr />
-            </div>
           </fieldset>
         </form>
+        <div v-for="nPlanets in numOfPlanets" v-bind:key="nPlanets">
+          <TableComponent name="PLANET_TYPE" :data="PLANET_TYPE" />
+          <TableComponent name="PLANET_POP" :data="PLANET_POP" />
+          <TableComponent name="PLANET_OWNER" :data="PLANET_OWNER" />
+          <TableComponent name="PLANET_SIZE" :data="PLANET_SIZE" />
+          <TableComponent name="PLANET_ATMOSPHERE" :data="PLANET_ATMOSPHERE" />
+          <TableComponent name="PLANET_HYDRO" :data="PLANET_HYDRO" />
+          <TableComponent name="PLANET_SPACEPORT" :data="PLANET_SPACEPORT" />
+          <TableComponent
+            name="PLANET_TEMPERATURE"
+            :data="PLANET_TEMPERATURE"
+          />
+          <TableComponent name="PLANET_GOVERNMENT" :data="PLANET_GOVERNMENT" />
+        </div>
       </div>
       <div class="pure-u-1-2">{{ PLANET_TYPE }}</div>
     </div>
@@ -72,8 +75,12 @@ import {
   PLANET_TEMPERATURE,
   PLANET_GOVERNMENT,
 } from "@/planet-types/planetTypes";
+import TableComponent from "@/components/TableComponent.vue";
 
 export default {
+  components: {
+    TableComponent,
+  },
   setup() {
     const mapCode = ref("");
     const mapObject = reactive({});

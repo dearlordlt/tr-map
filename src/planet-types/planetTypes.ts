@@ -3,35 +3,35 @@ type typeOptions = {
 };
 
 const PLANET_TYPE: typeOptions = {
-    "0": "CAPITAL",
-    "1": "MILITARY",
-    "2": "AGRARIAN",
-    "3": "INDUSTRIAL",
-    "4": "MIXED",
-    "5": "LEISURE",
+    "0": { type: "CAPITAL" },
+    "1": { type: "MILITARY" },
+    "2": { type: "AGRARIAN" },
+    "3": { type: "INDUSTRIAL" },
+    "4": { type: "MIXED" },
+    "5": { type: "LEISURE" },
 }
 
 const PLANET_POP: typeOptions = {
-    "0": { inhabitants: "None", pop: "0" },
-    "1": { inhabitants: "Few", pop: "1+" },
-    "2": { inhabitants: "Hundreds", pop: "100+" },
-    "3": { inhabitants: "Thousands", pop: "1,000+" },
-    "4": { inhabitants: "Tens of thousands", pop: "10,000+" },
-    "5": { inhabitants: "Hundreds of thousands", pop: "100,000+" },
-    "6": { inhabitants: "Millions", pop: "1,000,000+" },
-    "7": { inhabitants: "Tens of millions", pop: "10,000,000+" },
-    "8": { inhabitants: "Hundreds of millions", pop: "100,000,000+" },
-    "9": { inhabitants: "Billions", pop: "1,000,000,000+" },
-    "A": { inhabitants: "Tens of billions", pop: "10,000,000,000+" },
-    "B": { inhabitants: "Hundreds of billions", pop: "100,000,000,000+" },
-    "C": { inhabitants: "Trillions", pop: "1,000,000,000,000+" },
+    "0": { description: "None", pop: "0" },
+    "1": { description: "Few", pop: "1+" },
+    "2": { description: "Hundreds", pop: "100+" },
+    "3": { description: "Thousands", pop: "1,000+" },
+    "4": { description: "Tens of thousands", pop: "10,000+" },
+    "5": { description: "Hundreds of thousands", pop: "100,000+" },
+    "6": { description: "Millions", pop: "1,000,000+" },
+    "7": { description: "Tens of millions", pop: "10,000,000+" },
+    "8": { description: "Hundreds of millions", pop: "100,000,000+" },
+    "9": { description: "Billions", pop: "1,000,000,000+" },
+    "A": { description: "Tens of billions", pop: "10,000,000,000+" },
+    "B": { description: "Hundreds of billions", pop: "100,000,000,000+" },
+    "C": { description: "Trillions", pop: "1,000,000,000,000+" },
 }
 
 const PLANET_OWNER: typeOptions = {
-    "0": "INDEPENDENT",
-    "1": "EMPIRE",
-    "2": "JOTUN",
-    "3": "OLYMPUS",
+    "0": { type: "INDEPENDENT" },
+    "1": { type: "EMPIRE" },
+    "2": { type: "JOTUN" },
+    "3": { type: "OLYMPUS" },
 }
 
 const PLANET_SIZE: typeOptions = {
@@ -82,39 +82,39 @@ const PLANET_HYDRO: typeOptions = {
 }
 
 const PLANET_SPACEPORT: typeOptions = {
-    "A": { quality: "Excellent", cost: "1d x Cr1000", fuel: "Refined", facilities: "Shipyard (all), Repair", bases: "Naval 8+, Scout 10+, Research 8+, TAS" },
-    "B": { quality: "Good", cost: "1d x Cr500", fuel: "Refined", facilities: "Shipyard (spacecraft), Repair", bases: "Naval 8+, Scout 8+, Research 10+, TAS" },
-    "C": { quality: "Routine", cost: "1d x Cr100", fuel: "Unrefined", facilities: "Shipyard (small craft), Repair", bases: "Naval 8+, Scout 10+, Research 10+, TAS" },
-    "D": { quality: "Poor", cost: "1d X Cr10", fuel: "Unrefined", facilities: "Limited Repair", bases: "Scout 7+" },
-    "E": { quality: "Frontier", cost: "0", fuel: "None", facilities: "None", bases: "None" },
-    "X": { quality: "No Starport", cost: "0", fuel: "None", facilities: "None", bases: "None" },
+    "0": { type: "A", quality: "Excellent", cost: "1d x Cr1000", fuel: "Refined", facilities: "Shipyard (all), Repair", bases: "Naval 8+, Scout 10+, Research 8+, TAS" },
+    "1": { type: "B", quality: "Good", cost: "1d x Cr500", fuel: "Refined", facilities: "Shipyard (spacecraft), Repair", bases: "Naval 8+, Scout 8+, Research 10+, TAS" },
+    "2": { type: "C", quality: "Routine", cost: "1d x Cr100", fuel: "Unrefined", facilities: "Shipyard (small craft), Repair", bases: "Naval 8+, Scout 10+, Research 10+, TAS" },
+    "3": { type: "D", quality: "Poor", cost: "1d X Cr10", fuel: "Unrefined", facilities: "Limited Repair", bases: "Scout 7+" },
+    "4": { type: "E", quality: "Frontier", cost: "0", fuel: "None", facilities: "None", bases: "None" },
+    "5": { type: "X", quality: "No Starport", cost: "0", fuel: "None", facilities: "None", bases: "None" },
 }
 
 const PLANET_TEMPERATURE: typeOptions = {
-    "0": { type: "Frozen", avg_temp: "-51º or less", description: "Frozen world. No liquid water, very dry atmosphere." },
-    "1": { type: "Cold", avg_temp: "-51º to 0º", description: "Icy world. Little liquid water, extensive ice caps, few clouds." },
-    "2": { type: "Temperate", avg_temp: "0º-30º", description: "Temperate world. Earth- like.Liquid & vaporized water are common, moderate ice caps." },
-    "3": { type: "Hot", avg_temp: "31º-80º", description: "Hot world. Small or no ice caps, little liquid water.Most water in the form of clouds." },
-    "4": { type: "Boiling", avg_temp: "81º+", description: "Boiling world. No ice caps, little liquid water." },
+    "0": { type: "Frozen", avgTemp: "-51º or less", description: "Frozen world. No liquid water, very dry atmosphere." },
+    "1": { type: "Cold", avgTemp: "-51º to 0º", description: "Icy world. Little liquid water, extensive ice caps, few clouds." },
+    "2": { type: "Temperate", avgTemp: "0º-30º", description: "Temperate world. Earth- like.Liquid & vaporized water are common, moderate ice caps." },
+    "3": { type: "Hot", avgTemp: "31º-80º", description: "Hot world. Small or no ice caps, little liquid water.Most water in the form of clouds." },
+    "4": { type: "Boiling", avgTemp: "81º+", description: "Boiling world. No ice caps, little liquid water." },
 }
 
 const PLANET_GOVERNMENT: typeOptions = {
-    "0": { type: "None", description: "No government structure. In many cases, family bonds predominate", examples: "Family, Clan, Anarchy", common_contraband: "None" },
-    "1": { type: "Company/Corporation", description: "Ruling functions are assumed by a company managerial elite, and most citizenry are company employees or dependants", examples: "Corporate outpost, asteroid mine, feudal domain", common_contraband: "Weapons, Drugs, Travellers" },
-    "2": { type: "Participating Democracy", description: "Ruling functions are reached by the advice and consent of the citizenry directly", examples: "Collective, tribal council, commlinked consensus", common_contraband: "Drugs" },
-    "3": { type: "Self-Perpetuating Oligarchy", description: "Ruling functions are performed by a restricted minority, with little or no input from the mass of citizenry", examples: "Plutocracy, hereditary ruling caste", common_contraband: "Technology, Weapons, Travellers" },
-    "4": { type: "Representative Democracy", description: "Ruling functions are performed by elected representatives", examples: "Republic, democracy", common_contraband: "Drugs, Weapons, Psionics" },
-    "5": { type: "Feudal Technocracy", description: "Ruling functions are performed by specific individuals for persons who agree to be ruled by them.Relationships are based on the performance of technical activities which are mutually beneficial", examples: "Those with access to higher technology tend to have higher social status", common_contraband: "Technology, Weapons, Computers" },
-    "6": { type: "Captive Government", description: "Ruling functions are performed by an imposed leadership answerable to an outside group", examples: "A colony or conquered area", common_contraband: "Weapons, Technology, Travellers" },
-    "7": { type: "Balkanisation", description: "No central authority exists; rival governments complete for control.Law level refers to the government nearest the starport", examples: "Multiple governments, civil war", common_contraband: "Varies" },
-    "8": { type: "Civil Service Bureaucracy", description: "Ruling functions are performed by government agencies employing individuals selected for their expertise", examples: "Technocracy, Communism", common_contraband: "Drugs, Weapons," },
-    "9": { type: "Impersonal Bureaucracy", description: "Ruling functions are performed by agencies which have become insulated from the governed citizens", examples: "Entrenched castes of bureaucrats, decaying empire", common_contraband: "Technology, Weapons, Drugs, Travellers, Psionics" },
-    "A": { type: "Charismatic Dictator", description: "Ruling functions are performed by agencies directed by a single leader who enjoys the overwhelming confidence of the citizens", examples: "Revolutionary leader, messiah, emperor", common_contraband: "None" },
-    "B": { type: "Non-Charismatic Leader", description: "A previous charismatic dictator has been replaced by a leader through normal channels", examples: "Military dictatorship, hereditary kingship", common_contraband: "Weapons, Technology, Computers" },
-    "C": { type: "Charismatic Oligarchy", description: "Ruling functions are performed by a select group of members of an organization or class which enjoys the overwhelming confidence of the citizenry", examples: "Junta, revolutionary council", common_contraband: "Weapons" },
-    "D": { type: "Religious Dictatorship", description: "Ruling functions are performed by a religious organization without regard to the specific individual needs of the citizenry", examples: "Cult, transcendent philosophy, psionic group mind", common_contraband: "Varies" },
-    "E": { type: "Religious Autocracy", description: "Government by a single religious leader having absolute power over the citizenry", examples: "Messiah", common_contraband: "Varies" },
-    "F": { type: "Totalitarian Oligarchy", description: "Government by an all-powerful minority which maintains absolute control through widespread coercion and oppresion", examples: "World church, Ruthless corporation", common_contraband: "Varies" },
+    "0": { type: "None", description: "No government structure. In many cases, family bonds predominate", examples: "Family, Clan, Anarchy", commonContraband: "None" },
+    "1": { type: "Company/Corporation", description: "Ruling functions are assumed by a company managerial elite, and most citizenry are company employees or dependents", examples: "Corporate outpost, asteroid mine, feudal domain", commonContraband: "Weapons, Drugs, Travellers" },
+    "2": { type: "Participating Democracy", description: "Ruling functions are reached by the advice and consent of the citizenry directly", examples: "Collective, tribal council, commlinked consensus", commonContraband: "Drugs" },
+    "3": { type: "Self-Perpetuating Oligarchy", description: "Ruling functions are performed by a restricted minority, with little or no input from the mass of citizenry", examples: "Plutocracy, hereditary ruling caste", commonContraband: "Technology, Weapons, Travellers" },
+    "4": { type: "Representative Democracy", description: "Ruling functions are performed by elected representatives", examples: "Republic, democracy", commonContraband: "Drugs, Weapons, Psionics" },
+    "5": { type: "Feudal Technocracy", description: "Ruling functions are performed by specific individuals for persons who agree to be ruled by them.Relationships are based on the performance of technical activities which are mutually beneficial", examples: "Those with access to higher technology tend to have higher social status", commonContraband: "Technology, Weapons, Computers" },
+    "6": { type: "Captive Government", description: "Ruling functions are performed by an imposed leadership answerable to an outside group", examples: "A colony or conquered area", commonContraband: "Weapons, Technology, Travellers" },
+    "7": { type: "Balkanisation", description: "No central authority exists; rival governments complete for control.Law level refers to the government nearest the starport", examples: "Multiple governments, civil war", commonContraband: "Varies" },
+    "8": { type: "Civil Service Bureaucracy", description: "Ruling functions are performed by government agencies employing individuals selected for their expertise", examples: "Technocracy, Communism", commonContraband: "Drugs, Weapons," },
+    "9": { type: "Impersonal Bureaucracy", description: "Ruling functions are performed by agencies which have become insulated from the governed citizens", examples: "Entrenched castes of bureaucrats, decaying empire", commonContraband: "Technology, Weapons, Drugs, Travellers, Psionics" },
+    "A": { type: "Charismatic Dictator", description: "Ruling functions are performed by agencies directed by a single leader who enjoys the overwhelming confidence of the citizens", examples: "Revolutionary leader, messiah, emperor", commonContraband: "None" },
+    "B": { type: "Non-Charismatic Leader", description: "A previous charismatic dictator has been replaced by a leader through normal channels", examples: "Military dictatorship, hereditary kingship", commonContraband: "Weapons, Technology, Computers" },
+    "C": { type: "Charismatic Oligarchy", description: "Ruling functions are performed by a select group of members of an organization or class which enjoys the overwhelming confidence of the citizenry", examples: "Junta, revolutionary council", commonContraband: "Weapons" },
+    "D": { type: "Religious Dictatorship", description: "Ruling functions are performed by a religious organization without regard to the specific individual needs of the citizenry", examples: "Cult, transcendent philosophy, psionic group mind", commonContraband: "Varies" },
+    "E": { type: "Religious Autocracy", description: "Government by a single religious leader having absolute power over the citizenry", examples: "Messiah", commonContraband: "Varies" },
+    "F": { type: "Totalitarian Oligarchy", description: "Government by an all-powerful minority which maintains absolute control through widespread coercion and oppresion", examples: "World church, Ruthless corporation", commonContraband: "Varies" },
 }
 
 const planetType = (type: string | number) => {
