@@ -60,6 +60,8 @@ import {
   planetAtmosphere,
   planetHydro,
   planetSpaceport,
+  planetTemperature,
+  planetGovernment,
   PLANET_TYPE,
   PLANET_POP,
   PLANET_OWNER,
@@ -67,6 +69,8 @@ import {
   PLANET_ATMOSPHERE,
   PLANET_HYDRO,
   PLANET_SPACEPORT,
+  PLANET_TEMPERATURE,
+  PLANET_GOVERNMENT,
 } from "@/planet-types/planetTypes";
 
 export default {
@@ -80,9 +84,10 @@ export default {
     };
     return {
       mapCode,
-      mapCodeChange,
       mapObject,
       numOfPlanets,
+      mapCodeChange,
+      // Planet types
       planetType,
       planetPop,
       planetOwner,
@@ -90,6 +95,8 @@ export default {
       planetAtmosphere,
       planetHydro,
       planetSpaceport,
+      planetTemperature,
+      planetGovernment,
       PLANET_TYPE,
       PLANET_POP,
       PLANET_OWNER,
@@ -97,6 +104,8 @@ export default {
       PLANET_ATMOSPHERE,
       PLANET_HYDRO,
       PLANET_SPACEPORT,
+      PLANET_TEMPERATURE,
+      PLANET_GOVERNMENT,
     };
   },
 };
